@@ -1,14 +1,14 @@
-import { logger } from "@revenge-mod/api";
-import { find } from "@revenge-mod/api/common/webpack";
+const { logger } = window.revenge.api;
+const { find } = window.revenge.api.common.webpack;
 
-export function onLoad() {
+export const onLoad = () => {
     const settings = find(m => m?.default?.developerMode !== undefined || m?.developerMode !== undefined);
     if (settings) {
         settings.developerMode = true;
         logger.log("Developer Mode Enabled.");
     }
-}
+};
 
-export function onUnload() {
+export const onUnload = () => {
     logger.log("DevMode Unloaded.");
-}
+};
