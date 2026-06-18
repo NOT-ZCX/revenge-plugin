@@ -1,13 +1,11 @@
 {
-  "name": "my-revenge-plugin",
+  "name": "my-revenge-plugins",
   "version": "1.0.0",
-  "description": "A template plugin for Revenge",
-  "main": "src/index.ts",
-  "scripts": {
-    "build": "spack"
-  },
   "devDependencies": {
     "@revenge-mod/types": "latest",
-    "@swc/core": "latest"
+    "esbuild": "latest"
+  },
+  "scripts": {
+    "build": "esbuild plugins/*/index.ts --bundle --outdir=dist"
   }
 }
