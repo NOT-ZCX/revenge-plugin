@@ -1,5 +1,14 @@
 {
-  "name": "Auto Developer Mode",
-  "description": "Automatically enables developer tools.",
-  "main": "index.js"
+        "name": "DevMode",
+        "description": "Automatically enabled developer mode on startup.",
+        "authors": [
+                {
+                        "name": "zombie.clanx",
+                        "id": "999290874460655616"
+                }
+        ],
+        "main": "src/index.ts",
+        "vendetta": {
+                "icon": "ic_highlight"
+        }
 }
