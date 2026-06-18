@@ -1,12 +1,28 @@
 {
-  "name": "my-revenge-plugins",
-  "version": "1.0.0",
-  "devDependencies": {
-    "@revenge-mod/types": "latest",
-    "esbuild": "latest",
-    "copyfiles": "latest"
-  },
-  "scripts": {
-    "build": "esbuild plugins/*/index.ts --bundle --outdir=dist && copyfiles -u 1 \"plugins/*/manifest.json\" dist/"
-  }
+        "private": true,
+        "scripts": {
+                "build": "node build.mjs"
+        },
+        "dependencies": {
+                "@swc/helpers": "^0.4.14"
+        },
+        "devDependencies": {
+                "@rollup/plugin-commonjs": "^24.0.0",
+                "@rollup/plugin-node-resolve": "^15.0.1",
+                "@swc/core": "^1.3.35",
+                "esbuild": "^0.16.14",
+                "rollup": "^3.9.1",
+                "rollup-plugin-esbuild": "^5.0.0",
+                "vendetta-types": "latest",
+                "zustand": "^3.7.2"
+
+        },
+        "pnpm": {
+                "peerDependencyRules": {
+                        "ignoreMissing": [
+                                "react",
+                                "react-native"
+                        ]
+                }
+        }
 }
