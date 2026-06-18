@@ -1,4 +1,11 @@
 {
+  "name": "my-revenge-plugins",
+  "version": "1.0.0",
+  "devDependencies": {
+    "@revenge-mod/types": "latest",
+    "esbuild": "latest",
+    "copyfiles": "latest"
+  },
   "scripts": {
     "build": "esbuild plugins/*/index.ts --bundle --outdir=dist && copyfiles -u 1 \"plugins/*/manifest.json\" dist/"
   }
