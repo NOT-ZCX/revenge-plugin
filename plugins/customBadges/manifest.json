@@ -1,0 +1,11 @@
+{
+    "name": "Custom Badges",
+    "description": "Adds a custom badge to your profile.",
+    "authors": [
+        {
+            "name": "YourName",
+            "id": "123456789012345678"
+        }
+    ],
+    "main": "index.ts"
+}
